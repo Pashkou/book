@@ -41,5 +41,13 @@ public class Employee {
 	public void setPaymentSchedule(PaymentSchedule paymentSchedule) {
 		this.paymentSchedule = paymentSchedule;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
 	
 }

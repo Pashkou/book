@@ -11,7 +11,11 @@ public class PayrollDatabase {
 		employees.put(id, employee);
 	}
 
-	public static Employee GetEmployee(Integer id)    {
+	public static Employee getEmployee(Integer id)    {
 		return employees.get(id);
+	}
+
+	public static void removeEmployee(Integer empId) {
+		employees.remove(empId);
 	}
 }

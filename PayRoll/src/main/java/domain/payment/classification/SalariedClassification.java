@@ -14,4 +14,8 @@ public class SalariedClassification implements PaymentClassification {
 		return salary;
 	}
 
+	public double getSalary() {
+		return salary;
+	}
+
 }
