@@ -12,6 +12,4 @@ public class DeleteEmployeeTransaction  implements Transaction{
 	public void execute() {
 		PayrollDatabase.removeEmployee(empId);
 	}
-
-
 }

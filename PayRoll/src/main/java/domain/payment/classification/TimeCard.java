@@ -1,22 +1,22 @@
 package domain.payment.classification;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class TimeCard {
-	private Date date;
+	private LocalDate localDate;
 	private double hours;
 	
-	public Date getDate() {
-		return date;
+	public TimeCard(LocalDate localDate, double hours) {
+		this.localDate = localDate;
+		this.hours = hours;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+
+	public LocalDate getLocalDate() {
+		return localDate;
 	}
+
 	public double getHours() {
 		return hours;
-	}
-	public void setHours(double hours) {
-		this.hours = hours;
 	}
 	
 	
