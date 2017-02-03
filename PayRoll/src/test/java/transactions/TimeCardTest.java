@@ -25,6 +25,5 @@ public class TimeCardTest {
 		HourlyClassification hc = (HourlyClassification)paymentClassification;
 		TimeCard timeCard = hc.getTimeCard(LocalDate.now());
 		assertEquals(timeCard.getHours(), 8.0, 0.001);
-		
 	}
 }
