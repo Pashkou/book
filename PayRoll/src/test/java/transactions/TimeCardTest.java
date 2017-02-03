@@ -6,7 +6,6 @@ import org.junit.Test;
 import database.PayrollDatabase;
 import domain.Employee;
 import domain.PaymentClassification;
-import domain.TimeCardTransaction;
 import domain.payment.classification.HourlyClassification;
 import domain.payment.classification.TimeCard;
 
