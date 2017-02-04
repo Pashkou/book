@@ -11,6 +11,7 @@ import domain.Employee;
 import domain.PaymentClassification;
 import domain.payment.classification.CommissionedClassification;
 import domain.payment.classification.SalesReciept;
+import transactions.add.AddCommissionedEmployeeTransaction;
 
 public class SalesRecieptsTest {
 	private Integer employeeID = 6;

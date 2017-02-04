@@ -1,4 +1,4 @@
-package transactions;
+package transactions.add;
 
 import database.PayrollDatabase;
 import domain.Employee;
@@ -6,6 +6,7 @@ import domain.PaymentClassification;
 import domain.PaymentMethod;
 import domain.PaymentSchedule;
 import domain.payment.method.HoldMethod;
+import transactions.Transaction;
 
 public abstract class AddEmployeeTransaction implements Transaction {
 

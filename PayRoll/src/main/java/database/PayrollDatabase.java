@@ -27,4 +27,8 @@ public class PayrollDatabase {
 	public static void AddUnionMember(Integer memberId, Employee employee) {
 		unionMembers.put(memberId, employee);		
 	}
+	
+	public static void updateEmployee(Integer employeeId, Employee employee){
+		employees.put(employeeId, employee);
+	}
 }

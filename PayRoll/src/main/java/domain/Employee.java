@@ -1,7 +1,5 @@
 package domain;
 
-import java.util.List;
-
 public class Employee {
 	private PaymentMethod paymentMethod;
 	private PaymentClassification paymentClassification;
@@ -56,6 +54,10 @@ public class Employee {
 
 	public Affiliation getAffiliation() {
 		return affiliation;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }

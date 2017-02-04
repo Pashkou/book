@@ -1,4 +1,4 @@
-package transactions;
+package transactions.add;
 
 import domain.PaymentClassification;
 import domain.PaymentSchedule;

@@ -7,6 +7,7 @@ import database.PayrollDatabase;
 import domain.Employee;
 import domain.affiliation.ServiceCharge;
 import domain.affiliation.UnionAffiliation;
+import transactions.add.AddHourlyEmployeeTransaction;
 
 public class ServiceChargeTest {
 

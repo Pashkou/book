@@ -8,6 +8,7 @@ import domain.Employee;
 import domain.PaymentClassification;
 import domain.payment.classification.HourlyClassification;
 import domain.payment.classification.TimeCard;
+import transactions.add.AddHourlyEmployeeTransaction;
 
 public class TimeCardTest {
 

@@ -16,6 +16,9 @@ import domain.payment.method.HoldMethod;
 import domain.payment.schedule.Biweekly;
 import domain.payment.schedule.Monthly;
 import domain.payment.schedule.Weekly;
+import transactions.add.AddCommissionedEmployeeTransaction;
+import transactions.add.AddHourlyEmployeeTransaction;
+import transactions.add.AddSalariedEmployeeTransaction;
 
 public class CRUDEmployeesTest {
 
