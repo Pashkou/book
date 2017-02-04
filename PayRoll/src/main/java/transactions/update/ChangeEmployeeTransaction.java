@@ -1,5 +1,6 @@
 package transactions.update;
 
+import customexceptions.InvalidOperationException;
 import database.PayrollDatabase;
 import domain.Employee;
 import transactions.Transaction;
@@ -15,7 +16,10 @@ public abstract class ChangeEmployeeTransaction implements Transaction {
 	
 	public void execute() {
 		Employee employee = PayrollDatabase.getEmployee(employeeId);
-		change(employee);
+		if(employee != null)
+			change(employee);
+		else
+			throw new InvalidOperationException("Employee does not exist.");
 	}
 
 }
