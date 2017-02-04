@@ -14,15 +14,9 @@ public class SalesReciept {
 	public LocalDate getLocalDate() {
 		return localDate;
 	}
-	public void setLocalDate(LocalDate localDate) {
-		this.localDate = localDate;
-	}
 	
 	public double getAmount() {
 		return amount;
-	}
-	public void setAmount(double amount) {
-		this.amount = amount;
 	}
 	
 }

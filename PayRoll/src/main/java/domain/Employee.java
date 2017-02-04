@@ -5,7 +5,7 @@ import java.util.List;
 public class Employee {
 	private PaymentMethod paymentMethod;
 	private PaymentClassification paymentClassification;
-	private List<Affiliation> affiliation;
+	private Affiliation affiliation;
 	private PaymentSchedule paymentSchedule;
 	
 	private double employeeID;
@@ -48,6 +48,14 @@ public class Employee {
 
 	public String getAddress() {
 		return address;
+	}
+
+	public void setAffiliation(Affiliation affiliation) {
+		this.affiliation = affiliation;
+	}
+
+	public Affiliation getAffiliation() {
+		return affiliation;
 	}
 	
 }
