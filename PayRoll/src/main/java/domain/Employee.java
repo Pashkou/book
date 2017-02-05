@@ -1,9 +1,11 @@
 package domain;
 
+import domain.affiliation.NoAffiliation;
+
 public class Employee {
 	private PaymentMethod paymentMethod;
 	private PaymentClassification paymentClassification;
-	private Affiliation affiliation;
+	private Affiliation affiliation = new NoAffiliation();
 	private PaymentSchedule paymentSchedule;
 	
 	private double employeeID;
