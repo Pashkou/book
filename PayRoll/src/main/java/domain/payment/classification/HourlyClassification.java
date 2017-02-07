@@ -6,6 +6,7 @@ import java.util.List;
 
 import customexceptions.TimeCardNotFoundException;
 import domain.PaymentClassification;
+import transaction.payments.Paycheck;
 
 public class HourlyClassification implements PaymentClassification {
 	private List<TimeCard> timeCards = new ArrayList<TimeCard>();
@@ -27,17 +28,25 @@ public class HourlyClassification implements PaymentClassification {
 		}
 		throw new TimeCardNotFoundException();
 	}
-
 	
-	public double calculatePay() {
+	public double calculatePay(Paycheck paycheck) {
 		double result = 0;
 		for(TimeCard timeCard: timeCards){
-			double hours = timeCard.getHours();
-			result += hours * houryRare;
+			if( isInTimePeriod(paycheck, timeCard) ){
+				double hours = timeCard.getHours();
+				if(hours > 8){
+					double overtime = Math.abs(hours - 8);
+					result += overtime * houryRare * 1.5;
+					hours = 8;
+				}
+				result += hours * houryRare;
+			}
 		}
 		return result;
 	}
-	
-	
-	
+
+	private boolean isInTimePeriod(Paycheck paycheck, TimeCard timeCard) {
+		return paycheck.getPayDate().getDayOfYear() - timeCard.getLocalDate().getDayOfYear() < 6;
+	}
+
 }

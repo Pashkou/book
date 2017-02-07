@@ -6,6 +6,7 @@ import java.util.List;
 
 import customexceptions.SalesRecieptNotFoundException;
 import domain.PaymentClassification;
+import transaction.payments.Paycheck;
 
 public class CommissionedClassification implements PaymentClassification {
 	private List<SalesReciept> salesReciepts = new ArrayList<SalesReciept>();
@@ -23,7 +24,7 @@ public class CommissionedClassification implements PaymentClassification {
 	}
 
 	
-	public double calculatePay() {
+	public double calculatePay(Paycheck paycheck) {
 		double result = 0;
 		/*for(SalesReciept salesReciept: salesRecipts){
 			salesReciept.getAmount();

@@ -74,7 +74,7 @@ public class Employee {
 	}
 
 	public void pay(Paycheck pc) {
-		double grossPay = paymentClassification.calculatePay();
+		double grossPay = paymentClassification.calculatePay(pc);
 		double deductions = affiliation.calculateDeductions(pc);
 		pc.setDeductions(deductions);
 		pc.setGrosspay(grossPay);

@@ -1,6 +1,7 @@
 package domain.payment.classification;
 
 import domain.PaymentClassification;
+import transaction.payments.Paycheck;
 
 public class SalariedClassification implements PaymentClassification {
 	private double salary;
@@ -10,7 +11,7 @@ public class SalariedClassification implements PaymentClassification {
 		this.salary = salary;
 	}
 
-	public double calculatePay() {
+	public double calculatePay(Paycheck paycheck) {
 		return salary;
 	}
 
