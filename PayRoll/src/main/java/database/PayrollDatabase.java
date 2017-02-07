@@ -31,4 +31,8 @@ public class PayrollDatabase {
 	public static void updateEmployee(Integer employeeId, Employee employee){
 		employees.put(employeeId, employee);
 	}
+
+	public static Hashtable<Integer, Employee> getEmployees() {
+		return employees;
+	}
 }

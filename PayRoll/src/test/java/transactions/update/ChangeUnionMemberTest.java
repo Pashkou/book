@@ -12,7 +12,7 @@ public class ChangeUnionMemberTest {
 	@Test
 	public void testChangeUnionMembership(){
 		Integer employeeID = 9;
-		AddHourlyEmployeeTransaction ahet = new AddHourlyEmployeeTransaction(employeeID, "name", "address");
+		AddHourlyEmployeeTransaction ahet = new AddHourlyEmployeeTransaction(employeeID, "name", "address", 15.95);
 		ahet.execute();
 		
 		Employee employee = PayrollDatabase.getEmployee(employeeID);

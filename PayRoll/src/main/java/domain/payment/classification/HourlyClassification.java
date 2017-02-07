@@ -9,7 +9,12 @@ import domain.PaymentClassification;
 
 public class HourlyClassification implements PaymentClassification {
 	private List<TimeCard> timeCards = new ArrayList<TimeCard>();
-
+	private double houryRare;
+	
+	public HourlyClassification(double houryRare){
+		this.houryRare = houryRare;
+	}
+	
 	public void addTimeCard(TimeCard timeCard){
 		timeCards.add(timeCard);
 	}
@@ -23,13 +28,16 @@ public class HourlyClassification implements PaymentClassification {
 		throw new TimeCardNotFoundException();
 	}
 
+	
 	public double calculatePay() {
 		double result = 0;
-		/*for(TimeCard timeCard: timeCards){
+		for(TimeCard timeCard: timeCards){
 			double hours = timeCard.getHours();
-			Date date = timeCard.getDate();
-			result += 0;
-		}*/
+			result += hours * houryRare;
+		}
 		return result;
 	}
+	
+	
+	
 }

@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.HashMap;
 
 import domain.Affiliation;
+import transaction.payments.Paycheck;
 
 public class UnionAffiliation implements Affiliation {
 	private HashMap<LocalDate, ServiceCharge> serviceCharges = new HashMap<LocalDate, ServiceCharge>();
@@ -25,5 +26,9 @@ public class UnionAffiliation implements Affiliation {
 	
 	public ServiceCharge getServiceCharge(LocalDate localDate){
 		return serviceCharges.get(localDate);
+	}
+
+	public double calculateDeductions(Paycheck payCheck) {
+		return 0;
 	}
 }

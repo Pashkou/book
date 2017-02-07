@@ -15,7 +15,7 @@ public class TimeCardTest {
 	@Test
 	public void addTimeCardToHourlyEmployee(){
 		Integer employeeID = 5;
-		AddHourlyEmployeeTransaction employeeTransaction = new AddHourlyEmployeeTransaction(employeeID, "Siarhei", "Home");
+		AddHourlyEmployeeTransaction employeeTransaction = new AddHourlyEmployeeTransaction(employeeID, "Siarhei", "Home", 15.95);
 		employeeTransaction.execute();
 		TimeCardTransaction timeCardTA = new TimeCardTransaction(LocalDate.now(), 8.0, employeeID);
 		timeCardTA.execute();

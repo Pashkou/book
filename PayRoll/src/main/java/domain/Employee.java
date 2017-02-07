@@ -1,6 +1,9 @@
 package domain;
 
+import java.time.LocalDate;
+
 import domain.affiliation.NoAffiliation;
+import transaction.payments.Paycheck;
 
 public class Employee {
 	private PaymentMethod paymentMethod;
@@ -18,6 +21,10 @@ public class Employee {
 		this.address = address;
 	}
 
+	public boolean isPayDate(LocalDate localDate){
+		return paymentSchedule.isPayDate(localDate);
+	}
+	
 	public PaymentMethod getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -64,5 +71,15 @@ public class Employee {
 
 	public void setAddress(String newAddress) {
 		this.address = newAddress;
+	}
+
+	public void pay(Paycheck pc) {
+		double grossPay = paymentClassification.calculatePay();
+		double deductions = affiliation.calculateDeductions(pc);
+		pc.setDeductions(deductions);
+		pc.setGrosspay(grossPay);
+		double netPay = grossPay - deductions;
+		pc.setNetpay(netPay);
+		pc.setDeductions(deductions);
 	}
 }

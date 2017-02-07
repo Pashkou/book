@@ -43,7 +43,7 @@ public class CRUDEmployeesTest {
 	@Test
 	public void testAddHourlyEmployee() {
 		int empId = 1;
-		AddHourlyEmployeeTransaction t = new AddHourlyEmployeeTransaction(new Integer(empId), "Bob", "Home");
+		AddHourlyEmployeeTransaction t = new AddHourlyEmployeeTransaction(new Integer(empId), "Bob", "Home", 15.95);
 		t.execute();
 		Employee e = PayrollDatabase.getEmployee(empId);
 		assertEquals("Bob", e.getName());

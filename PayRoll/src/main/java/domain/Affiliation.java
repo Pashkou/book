@@ -1,5 +1,7 @@
 package domain;
 
-public interface Affiliation {
+import transaction.payments.Paycheck;
 
+public interface Affiliation {
+	public double calculateDeductions(Paycheck payCheck);
 }

@@ -16,7 +16,7 @@ public class ServiceChargeTest {
 	@Test
 	public void addServiceCharge(){
 		Integer employeeId = 7;
-		AddHourlyEmployeeTransaction addHempTC = new AddHourlyEmployeeTransaction(employeeId, "Pashkou", "Sweet home");
+		AddHourlyEmployeeTransaction addHempTC = new AddHourlyEmployeeTransaction(employeeId, "Pashkou", "Sweet home", 15.95);
 		addHempTC.execute();
 		
 		Employee employee = PayrollDatabase.getEmployee(employeeId);

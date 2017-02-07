@@ -22,7 +22,7 @@ public class ChangeEmployeeNameTransactionTest {
 	@Test
 	public void testChangeNameEmployee() {
 		Integer empId = 1;
-		AddHourlyEmployeeTransaction t = new AddHourlyEmployeeTransaction(empId, oldName , "Home");
+		AddHourlyEmployeeTransaction t = new AddHourlyEmployeeTransaction(empId, oldName , "Home", 15.95);
 		t.execute();
 		Employee e = PayrollDatabase.getEmployee(empId);
 		assertEquals("Bob", e.getName());

@@ -8,7 +8,7 @@ public class ChangeEmployeeAddressTransactionTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		
 	}
 
 }

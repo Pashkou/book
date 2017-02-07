@@ -31,7 +31,6 @@ public class TimeCardTransaction implements Transaction{
 			else
 				throw new InvalidOperationException("Tried added timecard to non-hour employee.");
 			
-			hc.addTimeCard(timeCard);
 		} else
 			throw new InvalidOperationException("No such employee");
 	}

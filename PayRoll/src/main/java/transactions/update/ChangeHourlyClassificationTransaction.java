@@ -11,7 +11,7 @@ public class ChangeHourlyClassificationTransaction extends ChangeClassificationT
 
 	@Override
 	protected PaymentClassification initiateNewPaymentClassification() {
-		return new HourlyClassification();
+		return new HourlyClassification(0);
 	}
 
 }
