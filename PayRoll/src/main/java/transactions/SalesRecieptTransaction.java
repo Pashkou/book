@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import customexceptions.InvalidOperationException;
 import database.PayrollDatabase;
 import domain.Employee;
+import domain.PaymentClassification;
 import domain.payment.classification.CommissionedClassification;
 import domain.payment.classification.SalesReciept;
 
@@ -24,10 +25,12 @@ public class SalesRecieptTransaction implements Transaction {
 		Employee employee = PayrollDatabase.getEmployee(employeeID);
 		if(employee != null){
 			
-			CommissionedClassification cc = (CommissionedClassification)employee.getPaymentClassification();
-			if(cc != null)
-				cc.addSalesReciept(new SalesReciept(localDate, amount));
-			else
+			PaymentClassification cc = employee.getPaymentClassification();
+			CommissionedClassification cClass;
+			if(cc != null && cc instanceof CommissionedClassification){
+				cClass = (CommissionedClassification)cc;
+				cClass.addSalesReciept(new SalesReciept(localDate, amount));
+			} else
 				throw new InvalidOperationException("Tried to add sales reciept to non-commissioned employee.");
 		}else
 			throw new InvalidOperationException("Employee not found.");
